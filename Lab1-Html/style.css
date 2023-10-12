@@ -1,0 +1,23 @@
+/*8*/
+li { list-style-type: square }
+/*10*/
+#price { color:red;font-weight: bold; }
+/*11*/
+p.first { font-style: italic;}
+/*12*/
+td>img {border: 5px solid; border-color: blue;}
+td>img:hover {border-color: red;}
+/*13*/
+h1+h2 {letter-spacing: 5px;}
+/*14*/
+td[colspan="2"] p {font-size: small;}
+/*15*/
+p+p {color: gray;}
+/*16*/
+body {background-image: url(books.jpg); background-repeat: repeat-y;}
+/*17*/
+h1 {color: blue !important; color:red;}
+
+/*18*/
+span.img-info {font-weight:bold;}
+span.img-info-publisher {text-decoration: underline;}
