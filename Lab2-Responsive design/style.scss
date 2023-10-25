@@ -1,3 +1,6 @@
+@use 'sass:list';
+@import 'reset';
+
 $default-font-size: 16px;
 $title-font-size: $default-font-size * 2;
 $section-title-font-size: $default-font-size * 1.5;
@@ -9,10 +12,10 @@ $defualt-border: black solid 2px;
 $default-div-bg-color: #E0E4CC;
 $column-flex: 33%;
 
-html, body{
-    height: 100vh;
-    margin: 0;
-}
+// html, body{
+//     height: 100vh;
+//     margin: 0;
+// }
 
 // mobiles
 
@@ -20,11 +23,20 @@ html, body{
     display: none;
 }
 
+$section-title-colors: #F38630 #E9AEAF;
+
+@for $i from 2 through 3 {
+    .row .column:nth-of-type(#{$i}) .section-title{
+        background-color: list.nth($section-title-colors, $i - 1);;
+    }
+}
+
 .row {
     display: flex;
     padding: $default-margin-length;
     flex-direction: column;
 }
+
 
 .header-button-section{
     display: none;
@@ -160,36 +172,33 @@ header {
     flex: 50%;
     margin: $default-margin-length
 }
-li button{
-    border: none;
-    background: none;
-}
-li button:hover {
-    color: gray;
-}
-li button:active {
-    margin-top: -5px;
+li {
+    button{
+        border: none;
+        background: none;
+    }
+    button:hover {
+        color: gray;
+    }
+    button:active {
+        margin-top: -5px;
+    }
 }
 
 section {
-    flex: auto;
+    flex: 100%;
 }
 
 .section-title {
     font-size: $section-title-font-size;
-    background-color: #69D2E7;
+    background-color: #69D2E7; // default color
     float: right;
     width: 57%;
     text-align: center;
     border-bottom: $defualt-border;
     border-left: $defualt-border;
 }
-#second-section-title {
-    background-color: #F38630;
-}
-#third-section-title{
-    background-color: #E9AEAF;
-}
+
 
 .section-header{
     margin-bottom: $default-margin-length;
@@ -204,6 +213,7 @@ footer {
     border-top: $defualt-border;
     margin-bottom: 0;
     flex: 40px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;

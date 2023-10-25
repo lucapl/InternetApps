@@ -1,10 +1,19 @@
 html, body {
-  height: 100vh;
   margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 .title {
   display: none;
+}
+
+.row .column:nth-of-type(2) .section-title {
+  background-color: #F38630;
+}
+
+.row .column:nth-of-type(3) .section-title {
+  background-color: #E9AEAF;
 }
 
 .row {
@@ -140,17 +149,15 @@ li button {
   border: none;
   background: none;
 }
-
 li button:hover {
   color: gray;
 }
-
 li button:active {
   margin-top: -5px;
 }
 
 section {
-  flex: auto;
+  flex: 100%;
 }
 
 .section-title {
@@ -161,14 +168,6 @@ section {
   text-align: center;
   border-bottom: black solid 2px;
   border-left: black solid 2px;
-}
-
-#second-section-title {
-  background-color: #F38630;
-}
-
-#third-section-title {
-  background-color: #E9AEAF;
 }
 
 .section-header {
@@ -184,6 +183,7 @@ footer {
   border-top: black solid 2px;
   margin-bottom: 0;
   flex: 40px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
