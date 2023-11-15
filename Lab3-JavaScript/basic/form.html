@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JavaScript</title>
+        <script src="form_check.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" title="Stylesheet"/>
+    </head>
+    <body>
+        <table> 
+            <tbody> 
+                <tr><td>Row 1</td></tr>
+                <tr><td>Row 2</td></tr>
+                <tr><td>Row 3</td></tr> 
+                <tr><td>Row 4</td></tr> 
+                <tr><td>Row 5</td></tr> 
+                <tr><td>Row 6</td></tr> 
+                <tr><td>Row 7</td></tr> 
+            </tbody> 
+        </table>
+        <input type="button" value="Submit" onclick="swapRows(this);">
+        <form name="data">
+            <table>
+                <tr><td>First name</td><td>
+                    <input type="text" name="f_fname">
+                    <span class="err" id="e_fname" />
+                </td></tr>
+                
+                <tr><td>Last Name</td><td>
+                    <input type="text" name="f_lname">
+                    <span class="err" id="e_lname" />
+                </td></tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input name="f_gender" value="f_f" checked type="radio" onclick="showElement('maiden-name');"/>female<br />
+                        <input name="f_gender" value="f_m" type="radio" onclick="hideElement('maiden-name');"/>male
+                    </td>
+                </tr>
+                <tr id="maiden-name"><td>Maiden name</td><td><input type="text" name="f_mname"/></td></tr>
+                <tr><td>E-mail</td><td>
+                    <input type="text" name="f_email">
+                    <span class="err" id="e_email" />
+                </td></tr>
+                <tr><td>Zip code</td><td>
+                    <span id="zip" onkeyup="return checkZIPCodeRegEx('zip');">
+                        <input type="text" name="f_zip"/>
+                        <span></span>
+                    </span>
+                    <span class="err" id="e_zip" />
+                </td></tr>
+                <tr><td>Street</td><td>
+                    <input type="text" name="f_street">
+                    <span class="err" id="e_street" />
+                </td></tr>
+                <tr><td>City</td><td>
+                    <input type="text" name="f_city">
+                    <span class="err" id="e_city" />
+                </td></tr>
+                <tr> <td>Remarks</td> 
+                    <td> 
+                        <textarea rows="5" cols="15" name="remarks" onkeyup="cnt(this.form.remarks, document.getElementById('left'), 150)"> </textarea>
+                    </td> 
+                </tr> 
+                <tr> <td><span id="left">150</span> letters left.</td> </tr>
+                <tr><td colspan="2"><input type="submit" value="Submit" onclick="return validate(this.form);"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
