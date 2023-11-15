@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Json test</title>
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function (){
+                $("button").on("click",function(){
+                    alert("click");
+                    $.getJSON("http://localhost:4000/json").done((data)=>{
+                        const guitars = data["Guitars"]["Guitar"]
+                        var html = ""
+
+                        for (i in guitars){
+                            const guitar = guitars[i];
+                            html = html + '<li><ul><li>Brand: '+guitar['Brand']+'</li><li>Model: '+guitar['Model']+'</li></ul></li>';
+                        }
+                        $("ul").html(html);
+                    });
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <button>
+            pokaż json
+        </button>
+        <ul>
+
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>events</title>
+        <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('td').one('click',edit)
+
+                $('button').bind('asdf', function () { 
+                alert('The cake is a lie! The cake is a SPY!'); 
+                //$('*').unbind();
+                });
+                
+                $('button').trigger('asdf');
+            });
+
+            
+            
+            function edit(){
+                var this_td = this;
+                $(this_td).html('<input id="edit" value="' + $(this_td).text() + '"></input>');
+                $("#edit").focus();
+                $("#edit").on("blur", function(){
+                    $(this_td).html($("#edit").val());
+                    $(this_td).one('click',edit);
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr><td>One</td></tr>
+            <tr><td>Two</td></tr>
+            <tr><td>Three</td></tr>
+            <tr><td>...</td></tr>
+        </table>
+        <button>Portal Birthday</button>
+    </body>
+</html>
