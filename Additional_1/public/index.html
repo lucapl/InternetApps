@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>How much do you pay in hours?</title>
+        <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" title="Stylesheet"/>
+    </head>
+    <body class="column">
+        <header>
+            <img src="maxresdefault.jpg" width="256" height="128"/>
+            <span>TF2 item value in hours spent working</span>
+        </header>
+        <section id="main-section" class="row">
+            <section class="panel">
+                <table>
+                    <tr>
+                        <td>Select country:</td>
+                        <td><select>
+                            <option value="Poland">🇵🇱 Poland</option>
+                            <option value="Germany">🇩🇪 Medic</option>
+                            <option value="France">🇫🇷 Spy</option>
+                            <option value="United Kingdom">🇬🇧 Demoman</option>
+                            <option value="United States">🇺🇸 Scout/Soldier/Engineer</option>
+                            <option value="Russian Federation">🇷🇺 Heavy</option>
+                            <option value="Australia">🇦🇺 Sniper</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Search for item:</td>
+                        <td>
+                            <input id="item-search" type="text">
+                            <div class="dropdown-menu">
+                                <ul class="item-list">
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="item-prices-panel column">
+                <---- search and select items
+                <!-- <div class="selected-item row">
+                    <img src="https://i.redd.it/szpouji7i4b91.jpg" height="256" width="256">
+                    <div class="column">
+                        <div class="selected-item-name">Beggar's bazooka</div>
+                        <div><span style="color: #FFD700;">Unique</span>:<span class="value">5 hours</span></div>
+                    </div>
+                    <button class="delete">
+                        X
+                    </button>
+                </div> -->
+            </section>
+        </section>
+        <section id="scrape"></section>
+        </section>
+    </body>
+</html>

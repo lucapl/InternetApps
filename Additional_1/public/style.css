@@ -1,0 +1,98 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    background-color: #A79F97;
+    font-family:  arial,helvetica,sans-serif;
+    font-size: 14px;
+    color: rgb(54, 54, 54);
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+    display: flex;
+}
+
+#main-section{
+    flex: 100%;
+}
+
+section.panel{
+    background-color: #D2CDC8;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding:10px;
+}
+
+header{
+    font-size: 49px;
+}
+
+.dropdown-menu {
+    background-color: white;
+    width: 85%;
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dropdown-menu ul{
+    margin: 0;
+    list-style: none;
+    padding-left: 5%;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.item-pic {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.item-name{
+    position: relative;
+    top: 0%;
+}
+
+
+.selected-item {
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #D2CDC8;
+}
+
+.selected-item img{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+button.delete{
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-weight: bold;
+}
+
+#scrape {
+    visibility: hidden;
+}
