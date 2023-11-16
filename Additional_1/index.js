@@ -5,20 +5,50 @@ const app = express();
 const { readFile } = require("fs");
 const request = require('request');
 
+const backpack_url = "https://www.backpack.tf";
+
+const wikipedia_url = "https://en.wikipedia.org/wiki/List_of_countries_by_minimum_wage";
 
 app.use(express.static("public"));
 
+const resourceLoader = new jsdom.ResourceLoader({
+    strictSSL: false,
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0",
+});
+
 app.get('/tf_values',(serv_req,serv_res) => {
-    request("https://www.backpack.tf", function(err,res,body){
+    request(backpack_url, function(err,res,body){
         const dom = new JSDOM(body,{
+            resources: resourceLoader,
             runScripts: "dangerously",
-            resources: "usable"
+            resources: "usable",
+            pretendToBeVisual: true,
+            virtualConsole: new jsdom.VirtualConsole(),
+            cookieJar: new jsdom.CookieJar(),
         });
         serv_res.send(dom.serialize());
         //console.log(dom);
         //serv_res.send(get_metal_prices(dom));
     });
 });
+
+//$("tr:has(a:contains(United States))")[0].children[5]
+
+app.get('/wiki_pay',(serv_req,serv_res) => {
+    request(wikipedia_url, function(err,res,body){
+        const dom = new JSDOM(body,{
+            resources: resourceLoader,
+            runScripts: "dangerously",
+            resources: "usable",
+            pretendToBeVisual: true,
+            virtualConsole: new jsdom.VirtualConsole(),
+            cookieJar: new jsdom.CookieJar(),
+        });
+        const $ = (require('jquery'))(dom.window);
+        serv_res.send($("tr:has(a:contains("+serv_req.query.country+"))").eq(0).children().eq(5).text());
+    });
+});
+
 
 app.listen(process.env.PORT || 3000)
 
