@@ -30,15 +30,20 @@ function create_suggested_list(response){
 }
 
 function add_item_to_list(item){
-    var item_url = item["image_url"];
-    if (item_url[0].charAt(0) == '/'){
-        item_url = backpack_tf+item_url
-    }
+    var item_url = fix_item_url(item["image_url"]);
     var item_name = item["item_name"];
     var item_id = item_name;
     var html_string = '<li id="'+item_id+'"class="found-item row"> <div class="item-pic"><img src="'+item_url+'" width="42" height="42"></div><div class="item-name">'+item_name+'</div></li>'
     $(".item-list").append(html_string);
     suggested_list.set(item_id,item);
+}
+
+function fix_item_url(img_url){
+    var item_url = img_url;
+    if (item_url[0].charAt(0) == '/'){
+        item_url = backpack_tf+item_url
+    }
+    return item_url;
 }
 
 function get_metal_price(json){
@@ -64,7 +69,7 @@ function get_price_and_unit(text){
 function select_item(item_id){
     var item = suggested_list.get(item_id);
     var item_html = '<div class="selected-item row">'+
-    '<img src="'+item["image_url"]+'" height="256" width="256">'+
+    '<img src="'+fix_item_url(item["image_url"])+'" height="256" width="256">'+
     '<div class="column">'+
         '<div class="selected-item-name">'+item["item_name"]+'</div>';
     
