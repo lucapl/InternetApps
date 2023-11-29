@@ -21,8 +21,7 @@
                     $('#toggle').toggleClass('asdf');
                     });
                 $('tr:even').addClass('asdf');
-                $('ol li.a:not(:has(.b[!href]))').addClass('asdf');
-                //'
+                $('ol.a > li:not(:has(.b a))').addClass('asdf');
             });
         </script>
     </head>
@@ -44,11 +43,11 @@
             <button>Text C</button>
             <span id="toggle">Toggling class</span>
         </div>
-        <ol>
+        <ol class="a">
             <li>Chleb</li>
-            <li class="a"><a class="b" href="https://smgostyn.pl/produkty-kategorie/maslo/   ">Masło</a></li>
+            <li><span class="b"><a class="b" href="https://smgostyn.pl/produkty-kategorie/maslo/   ">Masło</a></span></li>
             <li>Ziemniak</li>
-            <li class="a"><span class="b">Por</span></li>
+            <li><span class="b">Por</span></li>
             <li>Pomidor</li>
         </ol>
     </body>
