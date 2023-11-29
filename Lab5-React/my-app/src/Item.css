@@ -17,11 +17,18 @@
   margin-top: 10px;
 }
 
-button.delete {
+button.clear{
   background-color: transparent;
   border: none;
+}
+
+button.delete {
   color: red;
   font-weight: bold;
   align-self: flex-end;
   margin-left: auto;
+}
+
+.edit {
+  justify-content: space-between;
 }
