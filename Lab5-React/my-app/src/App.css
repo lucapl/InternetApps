@@ -1,0 +1,54 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  
+  background-color: darkslategray;
+}
+
+.app{
+  height: 100vh;
+}
+
+header {
+  background-color: slategray;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+}
+
+.item-list {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;  
+  align-items: center;
+}
+
+section.main {
+  
+  width: 100%;
+  /* height: 100%; */
+  overflow: hidden;
+
+}
+
+.title{
+  flex:50%
+}
+
+footer {
+  background-color: slategray;
+  width: 100%;
+  height: 20%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* position: absolute;
+  bottom: 0; */
+}

@@ -1,0 +1,75 @@
+{
+    "skulls":[
+        {
+            "id":0,
+            "name":"Spooky scary skull",
+            "description":"It's spooky scary like a skeleton",
+            "rating":10,
+            "image":"https://pyxis.nymag.com/v1/imgs/cfd/860/114940db7c7e1972b6414ee95d36fa99b8-15-spooky-scary-skeletons.rhorizontal.w600.jpg"
+        },
+        {
+            "id":1,
+            "name":"Misfits",
+            "description":"A punk band!\n🎶If you're gonna scream, scream with me🎶",
+            "rating":6,
+            "image":"https://i.scdn.co/image/ab67616100005174030d67ff9576754ff230b2c0"
+        },
+        {
+            "id":2,
+            "name":"Sans",
+            "description":"When does a skeleton laugh?\nWhen someone tickles his funny bone! ",
+            "rating":1,
+            "image":"https://upload.wikimedia.org/wikipedia/en/0/01/Sans_undertale.jpg"
+        },
+        {
+            "id":3,
+            "name":"Mary Magdalene",
+            "description":"The relics of a the Christian saint Mary Magdalene",
+            "rating":7,
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mary_Magdalene%27s_skull.jpg/330px-Mary_Magdalene%27s_skull.jpg"
+        },
+        {
+            "id":4,
+            "name":"The entirety of Paris Catacombs",
+            "description":"That's a lot of skulls",
+            "rating":1000,
+            "image":"https://www.parisperfect.com/g/photos/upload/sml_1055743116-1451221585-correctsize-catacombs-hero.jpg"
+        },
+        {
+            "id":5,
+            "name":"Pirate skull",
+            "description":"Argh",
+            "rating":8,
+            "image":"https://masterpiecebynumbers.com/cdn/shop/products/Pirate_Skull_40x50_Website.jpg?v=1650314112"
+        },
+        {
+            "id":6,
+            "name":"Vegeta",
+            "description":"ITS POWER LEVEL IS OVER 9000!",
+            "rating":9001,
+            "image":"https://files.cults3d.com/uploaders/14652071/illustration-file/438f9063-5511-4272-8980-2b2cbfddc136/7.jpg"
+        },
+        {
+            "id":7,
+            "name":"Diablo",
+            "description":"Classic Diablo II box art",
+            "rating":2000,
+            "image":"https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png"
+        },
+        {
+            "id":8,
+            "name":"The Lich",
+            "description":"The last scholar of Golb",
+            "rating": 555,
+            "image":"https://i.ytimg.com/vi/j18K_848I9Q/sddefault.jpg"
+        },
+        {
+            "id":9,
+            "name":"Tf2 skeletons",
+            "description":"Have 5 fps animations",
+            "rating":5,
+            "image":"https://wiki.teamfortress.com/w/images/thumb/3/3a/Skeleton_Group.png/300px-Skeleton_Group.png"
+        }
+
+    ]
+}
