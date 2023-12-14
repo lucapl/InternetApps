@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.column {
+    flex-direction: column;
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+    display: flex;
+}
+
+header {
+    background-color: orange;
+    padding: 1%;
+    /* margin-bottom: 1%; */
+}
+
+body{
+    background-color: lightgray;
+}
+
+/* section{
+    margin-top: 1%;
+} */
+
+.padding-small{
+    padding: 1%;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    flex: 90%;
+}
+
+.product-name {
+    padding: 1%;
+    font-size: 32px;
+    font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* white-space: nowrap; */
+}
+
+.product-price{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.product-quantity{
+    color: gray;
+    align-self: flex-end;
+}
+
+.product-info{  
+    height: 100%;
+    width: 50%;
+}
+
+.center{
+    display: flex;
+    align-content: center;
+}
+
+div.button{
+    align-self: flex-end;
+}
+
+.add2cart{
+    align-self: center;
+}
+
+.product img{
+    border-radius: 5%;
+}
+
+.product {
+    /* border: 2px black solid; */
+    border-radius: 3%;
+    background-color: whitesmoke;
+    justify-content: space-between;
+    margin-top: 2%;
+    width: 50%;
+}
+
+.product-list{
+    overflow: scroll;
+}
+
+button.cart{
+    border: none;
+    background: none;
+    font-size:xx-large;
+}
+
+.blink-class {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+    25%{opacity: 0.5;}
+    50%{opacity: 0;}
+    75%{opacity: 0.5;}
+}
+
+section.success{
+    background-color: limegreen;
+    color: whitesmoke;
+    padding: 1%;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
