@@ -62,6 +62,7 @@ router.post('/cart/payment', async (request,response)=>{
                 
             if (!product || product.quantity < quantity) {
                 response.redirect(`/cart?fail=${productId}&count=${quantity-product.quantity}`);
+                await session.abortTransaction();
                 return null;
             }
         }
