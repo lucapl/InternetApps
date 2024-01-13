@@ -33,7 +33,7 @@ div.flex {
 }
 ul.chat{
   overflow-y: scroll;
-  height: 70vh;
+  height: 60vh;
   border: 2px black solid;
 }
 div.chat{
